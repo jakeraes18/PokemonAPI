@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+.navPoke {
+    background-color: #ef5350;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 110px;
+        height: auto;
+        padding: 8px 0;
+    }
+}
+
+.card-img-top {
+    width: 40%;
+    margin: 0 auto;
+}

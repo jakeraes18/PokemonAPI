@@ -1,0 +1,25 @@
+.pokemon-card {
+  max-width: 400px;
+  margin: auto;
+  border-radius: 1rem;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pokemon-card img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.pokemon-card .card-title {
+  font-size: 1.5rem;
+}
+
+.pokemon-card .badge {
+  font-size: 0.75rem;
+}

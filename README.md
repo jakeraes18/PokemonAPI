@@ -1,59 +1,69 @@
-# PokeApp
+# Pokémon Search App 🧩
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+Esta es una aplicación frontend desarrollada con **Angular** que permite buscar información de Pokémon en tiempo real desde la [PokeAPI](https://pokeapi.co/).
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Instrucciones para ejecutar el frontend localmente
+
+1. **Clona el repositorio**:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+```
+
+2. **Instala las dependencias**:
+
+```bash
+npm install
+```
+
+3. **Inicia el servidor de desarrollo**:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. **Abre la aplicación en tu navegador**:
 
-## Code scaffolding
+Visita `http://localhost:4200/`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 📦 Dependencias necesarias
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Asegúrate de tener instalado:
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+- **Node.js** (v18 o superior recomendado)  
+- **npm** (v9 o superior)
+- **Angular CLI** (v17+):
 
 ```bash
-ng build
+npm install -g @angular/cli
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Dependencias del proyecto (ya incluidas en `package.json`):
 
-## Running unit tests
+- `@angular/core`
+- `@angular/common`
+- `@angular/router`
+- `rxjs`
+- `bootstrap` (para estilos visuales)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## ⏱️ Tiempo estimado de desarrollo
 
-## Running end-to-end tests
+El desarrollo de la prueba tomó aproximadamente **3 horas**, distribuidas en:
 
-For end-to-end (e2e) testing, run:
+- Configuración inicial y estructura.
+- Implementación del buscador y consumo de la API.
+- Manejo de errores y caché local.
+- Estilos responsivos y pruebas finales.
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🧠 Nota
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+La aplicación hace uso del almacenamiento `sessionStorage` para cachear resultados y evitar peticiones innecesarias.

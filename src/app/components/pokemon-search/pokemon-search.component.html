@@ -1,0 +1,35 @@
+<div class="navPoke">
+    <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="">
+</div>
+<div class="container mt-4">
+  <form (ngSubmit)="buscarPokemon()" class="mb-4">
+    <div class="input-group">
+      <input
+        [(ngModel)]="nombre"
+        name="nombre"
+        class="form-control"
+        placeholder="Ingresa el nombre del Pokémon"
+        required>
+      <button style="background-color: #ef5350; border: none;" class="btn btn-primary" type="submit">Buscar</button>
+    </div>
+  </form>
+
+  <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+  <div *ngIf="pokemon" class="card">
+    <img [src]="pokemon.imagenBase64" class="card-img-top" alt="{{ pokemon.nombre }}">
+    <div class="card-body">
+      <h5 class="card-title text-capitalize">{{ pokemon.nombre }}</h5>
+      <p><strong>Especie:</strong> {{ pokemon.especie }}</p>
+      <p><strong>Tipos:</strong> {{ pokemon.tipos.join(', ') }}</p>
+      <p><strong>Habilidades:</strong> {{ pokemon.habilidades.join(', ') }}</p>
+      <p><strong>Ataques:</strong> {{ pokemon.ataques.join(', ') }}</p>
+      <p><strong>Estadísticas:</strong></p>
+      <ul>
+        <li *ngFor="let stat of pokemon.estadisticas">
+          {{ stat.nombre }}: {{ stat.valor }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
